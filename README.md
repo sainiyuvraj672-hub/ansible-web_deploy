@@ -61,3 +61,37 @@ The project started as a single monolithic playbook and was later refactored int
 │   ├── firewall/          # Firewall and port management
 │   └── selinux/           # SELinux policy handling
 └── nagios.yml             # Monitoring integration playbook
+
+
+## 🚀 How to Run the Project
+
+### Prerequisites
+
+- Ansible installed on the control node
+- SSH access to all managed hosts
+- Inventory file correctly configured (`inventory.ini`)
+
+---
+
+### 1️⃣ Verify Connectivity
+
+Ensure the Ansible controller can communicate with all target nodes:
+
+```bash
+ansible web -m ping
+Run the Deployment Playbook
+
+Execute the main deployment:
+
+ansible-playbook site.yml
+
+3️⃣ Dry Run (Check Mode)
+
+Preview changes without applying them:
+
+ansible-playbook site.yml --check
+
+Author
+
+Yuvraj Saini
+📅 Project Date: December 2025
